@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Events\" />
     <Folder Include="EvnetHandlers\" />
-    <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Commands\" />
     <Folder Include="ComandHandlers\" />

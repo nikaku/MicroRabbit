@@ -26,9 +26,9 @@ namespace MicroRabbit.Banking.Api
             services.AddControllers();
 
             IConfigurationSection appSettingsSection = Configuration.GetSection("ConnectionStrings");
-            services.Configure<ConnectionStrings>(appSettingsSection);
-            ConnectionStrings appSettings = appSettingsSection.Get<ConnectionStrings>();
-            var connection = appSettings.BankingConnection;
+            services.Configure<AppSettings>(appSettingsSection);
+            AppSettings appSettings = appSettingsSection.Get<AppSettings>();
+            var connection = appSettings.ConnectionString;
 
             services.AddDbContext<BankingContext>(options =>
             {
