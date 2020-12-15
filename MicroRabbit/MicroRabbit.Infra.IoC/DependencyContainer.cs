@@ -11,7 +11,7 @@ namespace MicroRabbit.Infra.IoC
 {
     public class DependencyContainer
     {
-        public void RegisterServices(IServiceCollection services)
+        public static void RegisterServices(IServiceCollection services)
         {
             services.AddTransient<IEventBus, RabbitMQBus>();
 
